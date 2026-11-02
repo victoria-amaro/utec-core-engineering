@@ -15,7 +15,7 @@ class Square:
 
         Args:
             size (int): El tamaño del cuadrado. Por defecto 0.
-            position (tuple): La posición (x, y) del cuadrado. Por defecto (0, 0).
+            position (tuple): La posición (x, y) del cuadrado.
         """
         self.size = size
         self.position = position
