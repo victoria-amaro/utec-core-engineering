@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Módulo que define la clase Rectangle completa con área y representación __str__.
+Módulo que define la clase Rectangle
+completa con área y representación __str__.
 """
 BaseGeometry = __import__('base_geometry').BaseGeometry
 
@@ -32,6 +33,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """
-        Devuelve la representación en cadena legible del rectángulo.
+        Devuelve la representación en cadena legible del rectngulo.
         """
         return "[Rectangle] {}/{}".format(self.__width, self.__height)
