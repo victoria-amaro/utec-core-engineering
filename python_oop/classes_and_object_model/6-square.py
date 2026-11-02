@@ -41,11 +41,12 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """Setter para position con validaciones."""
-        if (not isinstance(value, tuple) or len(value) != 2 or
-                not all(isinstance(i, int) for i in value) or
+        """Setter para position con validaciones de tipo y valor."""
+        if (not isinstance(value, tuple) or
+                len(value) != 2 or
+                not all(type(i) is int for i in value) or
                 not all(i >= 0 for i in value)):
-            raise TypeError("position must be a tuple of 2 positive integer")
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
     def area(self):
@@ -66,10 +67,10 @@ class Square:
 
     def __str__(self):
         """Devuelve la representación en cadena del cuadrado."""
-        res = []
         if self.__size == 0:
             return ""
 
+        res = []
         for _ in range(self.__position[1]):
             res.append("")
 
